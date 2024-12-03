@@ -500,4 +500,4 @@ with gr.Blocks(css=css, title="Sana") as demo:
     )
 
 if __name__ == "__main__":
-    demo.queue(max_size=20).launch(server_name="0.0.0.0", server_port=DEMO_PORT, debug=False, share=args.share)
+    demo.queue(max_size=20).launch(server_name="127.0.0.1", server_port=DEMO_PORT, debug=False, share=args.share)
