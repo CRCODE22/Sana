@@ -43,8 +43,9 @@ def get_root_logger(
         :obj:`logging.Logger`: The obtained logger
     """
     if log_file is None:
-        log_file = "/dev/null"
-    logger = get_logger(name=name, log_file=log_file, log_level=log_level, timezone=timezone)
+        log_file = "log.txt"
+    logger = get_logger(name=name,  log_file=log_file, log_level=log_level, timezone=timezone)
+    print("Log file used:", log_file)
     return logger
 
 
@@ -62,7 +63,7 @@ class TimezoneFormatter(logging.Formatter):
         return s
 
 
-def get_logger(name, log_file=None, log_level=logging.INFO, timezone="UTC"):
+def get_logger(name, log_file="None", log_level=logging.INFO, timezone="UTC"):
     """Initialize and get a logger by name.
 
     If the logger has not been initialized, this method will initialize the
